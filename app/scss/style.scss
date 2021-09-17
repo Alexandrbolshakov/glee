@@ -1,0 +1,54 @@
+@import 'reset';
+@import 'vars';
+@import 'fonts';
+@import 'global';
+
+.header{
+    padding: 40px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.menu{
+    &__list{
+        display: flex;
+    }
+    &__list-item + .menu__list-item{
+        padding-left: 35px;
+    }
+    &__list-link{
+        padding-bottom: 5px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        &:hover{
+        }
+    }
+    &__list-link--active{
+    }
+}
+.user-nav{
+    display: flex;
+    &__link{
+        position: relative;
+    }
+    &__link + .user-nav__link{
+        padding-left: 25px;
+    }
+    &__num{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: -9px;
+        right: -14px;
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        line-height: 20px;
+    }
+}
+
+
+@import 'media';
