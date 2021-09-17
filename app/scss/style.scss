@@ -4,7 +4,7 @@
 @import 'global';
 
 .header{
-    padding: 40px 0;
+    padding: 60px 0;
     &__inner{
         display: flex;
         justify-content: space-between;
@@ -16,37 +16,75 @@
         display: flex;
     }
     &__list-item + .menu__list-item{
-        padding-left: 35px;
+        padding-left: 30px;
     }
     &__list-link{
-        padding-bottom: 5px;
+        cursor: pointer;
+        @extend %rubik-500;
+        font-size: 15px;
+        line-height: 12px;
+        color: $nav;
+        padding: 5px 0;
         transition: all 0.3s;
-        text-transform: uppercase;
         &:hover{
+            border-bottom: 1px solid $main;
         }
-    }
-    &__list-link--active{
     }
 }
 .user-nav{
     display: flex;
-    &__link{
-        position: relative;
+    &__search{
+        width: 51px;
+        height: 51px;
+        background-color: rgba($grey, 0.2);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 21px;
     }
-    &__link + .user-nav__link{
-        padding-left: 25px;
+    &__btns{
+        width: 178px;
+        height: 51px;
+        background-color: #fcd7b6;
+        border-radius: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 11px;
+        margin-right: 18px;
+    }
+    &__btn{
+        padding: 10px 30px;
+        position: relative;
+        &:first-child{
+            border-right: 1px solid rgba(#fff, .2);
+        }
     }
     &__num{
         position: absolute;
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
         border-radius: 50%;
-        top: -9px;
-        right: -14px;
-        font-size: 12px;
-        color: #fff;
+        top: 3px;
+        right: 20px;
+        font-size: 10px;
+        color: #243f4d;
         text-align: center;
-        line-height: 20px;
+        line-height: 16px;
+        background-color: #fff;
+        @extend %rubik-400;
+    }
+    &__burger{
+        width: 51px;
+        height: 51px;
+        background-color: $grey;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 

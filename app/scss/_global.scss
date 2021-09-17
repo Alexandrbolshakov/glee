@@ -1,6 +1,9 @@
 
 body{
     min-height: 100vh;
+    @extend %rubik-500;
+    font-size: 18px;
+    color: $main;
 }
 .container{
     margin: 0 auto;
