@@ -60,15 +60,52 @@
     <main class="main">
         <section class="breadcrumbs">
             <div class="container">
-                <h2 class="breadcrumbs__title">About Us</h2>
+                <h2 class="breadcrumbs__title">Log in</h2>
                 <ul class="breadcrumbs__list">
                     <li class="breadcrumbs__item">
                         <a class="breadcrumbs__link" href="#">Home</a>
                     </li>
                     <li class="breadcrumbs__item">
-                        <a class="breadcrumbs__link" href="#">About Us</a>
+                        <a class="breadcrumbs__link" href="#">Log in</a>
                     </li>
                 </ul>
+            </div>
+        </section>
+        <div class="login">
+            <div class="container">
+                <form action="/" class="form">
+                    <label class="form__label">
+                        Username or email address *
+                        <input type="text" class="form__input" required>
+                    </label>
+                    <label class="form__label">
+                        Password *
+                        <input type="password" class="form__input" required>
+                    </label>
+                    <button class="form__btn" type="submit">Login</button>
+                    <div class="form__links">
+                        <label class="form__label form__label--check">
+                            <input type="checkbox" class="form__input form__input--check" required>
+                            Remember me
+                        </label>
+                        <a href="#" class="form__link">Lost your password?</a>
+                    </div>
+                    <p class="form__text">Not registered? No problem</p>
+                    <a href="#" class="form__link-reg">Create an account</a>
+                </form>
+            </div>
+        </div>
+        <section class="articles">
+            <div class="brands brands--empty">
+                <div class="container">
+                    <div class="brands__inner">
+                        <img src="images/icons/brand-1.png" alt="" class="brands__item">
+                        <img src="images/icons/brand-2.png" alt="" class="brands__item">
+                        <img src="images/icons/brand-3.png" alt="" class="brands__item">
+                        <img src="images/icons/brand-4.png" alt="" class="brands__item">
+                        <img src="images/icons/brand-5.png" alt="" class="brands__item">
+                    </div>
+                </div>
             </div>
         </section>
     </main>

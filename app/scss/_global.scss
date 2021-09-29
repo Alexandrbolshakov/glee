@@ -29,3 +29,43 @@ body{
     line-height: normal;
     text-align: center;
 }
+.breadcrumbs{
+    background-color: rgba($grey, .2);
+    padding: 35px 0;
+    &__title{
+        color: #222933;
+        @extend %rubik-300;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    &__list{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    &__item{
+        padding-right: 10px;
+        margin-right: 5px;
+        position: relative;
+        &:after{
+            content: "/";
+            position: absolute;
+            font-size: 14px;
+            @extend %rubik-400;
+            color: rgba(#222933, 0.6);
+            top: 3px;
+            right: 0;
+        }
+    }
+    &__item:last-child{
+        &:after{
+            display: none;
+        }
+    }
+    &__link{
+        font-size: 14px;
+        @extend %rubik-400;
+        color: rgba(#222933, 0.6);      
+    }
+}
