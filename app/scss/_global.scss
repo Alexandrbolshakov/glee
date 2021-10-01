@@ -69,3 +69,31 @@ body{
         color: rgba(#222933, 0.6);      
     }
 }
+.pagination{
+    text-align: center;
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__item{
+        border: 1px solid $grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 20px;
+        margin: 0 7px;
+        background-color: #fff;
+        &--active{
+            background-color: $grey;
+            .pagination__link{
+                color: #fff;
+            }
+        }
+    }
+    &__link{
+        color: #243f4d;
+        font-size: 16px;
+        @extend %rubik-400;
+    }
+}

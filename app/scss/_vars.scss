@@ -8,7 +8,7 @@ $footer: #7b7b7b;
 
 %rubik-300{
     font-family: 'Rubik-Light', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
 }
 %rubik-400{
     font-family: 'Rubik-Regular', sans-serif;
@@ -34,4 +34,11 @@ $footer: #7b7b7b;
     font-family: 'DMSans-Bold', sans-serif;
     font-weight: 700;
     color: #234969;
+}
+%checkbox-hidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
 }
