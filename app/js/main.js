@@ -1,7 +1,29 @@
 $(function(){
 
+  $('.details-main__small').slick({
+    asNavFor: '.details-main__big',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+  });
+  $('.details-main__big').slick({
+    asNavFor: '.details-main__small',
+    draggable: false,
+    arrows: false,
+    fade: true
+  });
+
   $(".star").rateYo({
     starWidth: "11px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    readOnly: true,
+
+  });
+  $(".details-card__stars").rateYo({
+    starWidth: "18px",
     normalFill: "#d6d6d6",
     ratedFill: "#ffcc00",
     readOnly: true,
@@ -32,6 +54,24 @@ $(function(){
         dots: true,
         arrows: false,
     });
+
+    ////////////// counter
+    $(document).ready(function() {
+			$('.details-card__btn--minus').click(function () {
+				var $input = $(this).parent().find('.details-card__input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.details-card__btn--plus').click(function () {
+				var $input = $(this).parent().find('.details-card__input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+		});
 
     const container1 = document.querySelector('.products');
     const container2 = document.querySelector('.new');
