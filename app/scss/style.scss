@@ -1308,6 +1308,7 @@
         max-width: 210px;
     }
 }
+
 .footer-top {
     padding: 75px 0;
     display: flex;
@@ -1422,5 +1423,214 @@
         }
     }
 }
+.details-other{
+    &__tabs{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    &__tab{
+        width: 241px;
+        height: 53px;
+        border-radius: 5px;
+        background-color: rgba($grey, 0.2);
+        color: #243f4d;
+        @extend %rubik-500;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:not(:last-child){
+            margin-right: 13px;
+        }
+    }
+    &__tab--active{
+        background-color: $grey;
+        color: #fff;
+    }
+    &__text{
+        color: #243f4d;
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 120px;
+    }
+    &__title{
+        margin-bottom: 70px;
+        text-align: left;
+    }
+    &__item{
+        display: none;
 
+    }
+    &__item--active{
+        display: block;
+    }
+    .details-slider__slide{
+        height: 380px;
+        padding: 15px;
+    }
+    .product__item{
+        height: 380px;
+    }
+    .slick-prev,
+    .slick-next{
+        position: absolute;
+        top: -120px;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        border: 2px solid $grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 5;
+        background-color: transparent;
+    }
+    .slick-prev{
+        right: 120px;
+    }
+    .slick-next{
+        right: 50px;
+    }
+    .slick-disabled{
+        border: 2px solid rgba($grey, 0.2);
+    }
+}
+.blog-page{
+    padding-top: 120px;
+    &__inner{
+        display: flex;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+    }
+    &__item{
+        max-width: 830px;
+        margin-right: 80px;
+        margin-bottom: 50px;
+    }
+    &__image{
+        width: 830px;
+        height: 500px;
+        position: relative;
+        margin-bottom: 40px;
+    }
+    &__img{
+        width: 100%;
+        object-fit: cover;
+    }
+    &__image-box{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        padding: 28px 30px 28px 20px;
+        background-color: $grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image-link{
+        color: #fff;
+        font-size: 12px;
+        @extend %rubik-400;
+        padding-left: 20px;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            top: 0;
+            left: 0;
+            background-image: url("../images/icons/calendar.svg");
+        }
+    }
+    &__image-link:not(:last-child){
+        margin-right: 25px;
+    }
+    &__title{
+        margin-bottom: 35px;
+        text-align: left;
+    }
+    &__text{
+        margin-bottom: 40px;
+        color: #243f4d;
+        font-size: 16px;
+        line-height: 30px;
+        @extend %rubik-400;
+    }
+    &__link{
+        color: $grey;
+        border: 1px solid $grey;
+        padding: 19px 75px 19px 20px;
+        position: relative;
+        &:after{
+            content: "";
+            position: absolute;
+            top: 25px;
+            right: 20px;
+            width: 22px;
+            height: 9px;
+            background-image: url("../images/icons/arrow-next.svg");
+        }
+    }
+    .pagination{
+        text-align: left;
+        margin-top: 75px;
+    }
+    &__form{
+        display: flex;
+        margin-bottom: 60px;
+    }
+    &__search{
+        width: 220px;
+        height: 43px;
+        border-radius: 5px;
+        border: 1px solid $grey;
+        background-color: #ffffff;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+    }
+    &__search-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 43px;
+        width: 48px;
+        cursor: pointer;
+        border: 1px solid $grey;
+        background-color: #edf1f4;
+    }
+    .shop-filter__card-image{
+        min-width: 70px;
+        padding: 0;
+        border: none;
+    }
+    &__date{
+        padding-left: 20px;
+        position: relative;
+        color: #9a9a9a;
+        font-size: 12px;
+        @extend %rubik-400;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 13px;
+            height: 13px;
+            background-image: url("../images/icons/calendar-grey.svg");
+        }
+    }
+    .shop-filter__card-title{
+        line-height: 20px;
+    }
+}
 @import 'media';

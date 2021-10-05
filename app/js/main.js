@@ -1,5 +1,21 @@
 $(function(){
 
+  $('.details-slider').slick({
+    prevArrow: '<button type="button" class="slick-prev"><img src="../images/icons/arrow-prev.svg" alt="arrow prev"></img> </button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="../images/icons/arrow-next.svg" alt="arrow next"></img></button>',
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: false,
+  });
+
+  $('.details-other__tab').on('click', function(e){
+    e.preventDefault();
+    $('.details-other__tab').removeClass('details-other__tab--active');
+    $(this).addClass('details-other__tab--active');
+    $('.details-other__item').removeClass('details-other__item--active');
+    $($(this).attr('href')).addClass('details-other__item--active');
+  });
+
   $('.details-main__small').slick({
     asNavFor: '.details-main__big',
     focusOnSelect: true,
