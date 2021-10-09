@@ -15,6 +15,9 @@
 }
 
 .menu {
+    &__btn{
+        display: none;
+    }
     &__list {
         display: flex;
     }
@@ -1398,7 +1401,7 @@
     }
 }
 .footer-bottom {
-    height: 90px;
+    min-height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;

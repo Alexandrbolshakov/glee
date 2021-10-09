@@ -1,5 +1,9 @@
 $(function(){
 
+  $('.menu__btn').on('click', function(){
+    $('.menu__list').toggleClass('menu__list--active')
+  });
+
   $('.details-slider').slick({
     prevArrow: '<button type="button" class="slick-prev"><img src="../images/icons/arrow-prev.svg" alt="arrow prev"></img> </button>',
     nextArrow: '<button type="button" class="slick-next"><img src="../images/icons/arrow-next.svg" alt="arrow next"></img></button>',
