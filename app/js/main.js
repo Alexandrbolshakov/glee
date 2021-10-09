@@ -101,4 +101,11 @@ $(function(){
 
     const mixer1 = mixitup(container1, config);
     const mixer2 = mixitup(container2, config);
-})
+});
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 13,
+  });
+}

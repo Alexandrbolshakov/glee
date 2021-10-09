@@ -1905,6 +1905,109 @@
         @extend %rubik-400;
         padding: 16px 37px;
         text-transform: uppercase;
+        border-radius: 5px;
+    }
+}
+.contacts-top{
+    padding: 120px 0;
+    &__subtitle{
+        color: $grey;
+        font-size: 16px;
+        @extend %rubik-700;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    &__title{
+        margin-bottom: 75px;
+    }
+    &__inner{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fbfbfb;
+        padding: 70px 60px;
+        transition: all 0.3s;
+        border: 2px solid #fbfbfb;
+    }
+    &__card-img{
+        width: 80px;
+        height: 80px;
+        box-shadow: 0 6px 57px rgba(37, 37, 37, 0.05);
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 65px;
+        border-radius: 15px;
+        transition: all 0.3s;
+        path{
+            fill: $grey;
+        }
+    }
+    &__card-name{
+        @extend %dmsans-700;
+        color: #222222;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    &__card-descr{
+        font-size: 16px;
+        @extend %rubik-400;
+        color: #565872;
+        line-height: 30px;
+        text-align: center;
+        a{
+            font-size: 16px;
+            @extend %rubik-400;
+            color: #565872;
+        }
+    }
+    &__card:hover{
+        border: 2px solid $grey;
+        .contacts-top__card-img{
+            background-color: $grey;
+            box-shadow: 0 6px 57px rgba(37, 37, 37, 0.05);
+            path{
+                fill: #fff;
+            }
+        }
+    }
+}
+.contact-bottom{
+    &__inner{
+        display: flex;
+        column-gap: 50px;
+    }
+    &__form{
+        width: 65%;
+    }
+    &__map{
+        width: 45%;
+    }
+    .blog-details__input{
+        width: 300px;
+        input{
+            background-color: rgba(#f5f5f5, 0.5);
+            &::placeholder{
+                color: #565872;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .blog-details__textarea{
+        textarea{
+            background-color: rgba(#f5f5f5, 0.5);
+            height: 175px;
+            &::placeholder{
+                color: #565872;
+                text-transform: uppercase;
+            }
+        }
     }
 }
 @import 'media';
