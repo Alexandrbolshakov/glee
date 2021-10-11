@@ -106,19 +106,20 @@
 
 .top-slider {
     &__inner {
-        background: url('../images/top-slider-bg.jpg') center center/cover no-repeat;
-        padding: 220px 0 45px;
+        background-color: $accent;
+        padding: 100px 0 45px;
     }
 
     &__item {
         justify-content: center;
         display: flex !important;
-        padding-bottom: 207px;
+        padding-bottom: 15px;
     }
 
     &__content {
         margin-right: 120px;
         padding-left: 10px;
+        padding-top: 120px;
     }
 
     &__title {
