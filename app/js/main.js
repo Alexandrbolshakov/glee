@@ -10,6 +10,34 @@ $(function(){
     slidesToShow: 4,
     slidesToScroll: 1,
     infinite: false,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          arrows: false,
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+        }
+      },
+    ]
   });
 
   $('.details-other__tab').on('click', function(e){
@@ -27,6 +55,14 @@ $(function(){
     slidesToScroll: 1,
     vertical: true,
     draggable: false,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          vertical: false,
+        }
+      },
+    ]
   });
   $('.details-main__big').slick({
     asNavFor: '.details-main__small',

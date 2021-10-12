@@ -8,6 +8,14 @@
       object-fit: contain;
     }
   }
+  .blog-page{
+    &__content{
+      flex: 1 1 75%;
+    }
+    &__aside{
+      flex: 0 0 270px;
+    }
+  }
 }
 @media(max-width: 1200px){
   .products{
@@ -25,6 +33,42 @@
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
+    }
+  }
+  .team{
+    &__inner{
+      display: block;
+    }
+    &__descr-title{
+      text-align: center;
+    }
+    &__descr-text{
+      max-width: 100%;
+      padding: 15px;
+      text-align: center;
+    }
+  }
+  .blog-details{
+    &__input{
+      width: 48%;
+    }
+  }
+  .contact-bottom{
+    &__inner{
+      flex-direction: column;
+    }
+    &__form{
+      margin-bottom: 30px;
+    }
+    &__map{
+      width: 700px;
+      height: 700px;
+    }
+  }
+  .details-main{
+    &__sliders{
+      flex: 0 1 50%;
+      margin-right: 30px;
     }
   }
 }
@@ -144,6 +188,98 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
+  .mission{
+    padding: 60px 0;
+    &__inner{
+      flex-wrap: wrap;
+    }
+    &__img{
+      margin-bottom: 40px;
+    }
+    &__content{
+      margin-left: 0;
+    }
+  }
+  .team{
+    padding: 60px 0;
+  }
+  .blog-page{
+    padding-top: 40px;
+    &__inner{
+      flex-direction: column;
+    }
+    &__item{
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+  .pagination{
+    margin-bottom: 40px;
+  }
+  .contacts-top{
+    padding: 60px 0;
+    &__inner{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .contact-bottom{
+    &__form{
+      width: 100%;
+    }
+    .blog-details__input {
+      width: 48%;
+    }
+  }
+  .details-main{
+    padding: 60px 0;
+    display: block;
+    &__sliders{
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  .details-other{
+    &__text{
+      margin-bottom: 40px;
+    }
+  }
+  .form{
+    padding-top: 60px;
+  }
+  .shop-content{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .shop-filter{
+    width: 250px;
+  }
+  .shop{
+    padding: 60px 0;
+  }
+  .shop-main{
+    &--two{
+      .product__item-content{
+        padding-left: 30px;
+      }
+      .product__item-img{
+        width: 350px;
+        height: 450px;
+      }
+      .product__item{
+        display: block;
+      }
+      .product__item-img{
+        margin-bottom: 20px;
+      }
+      .product__item-title {
+        font-size: 30px;
+      }
+    }
+  }
+  .terms{
+    padding-top: 60px;
+  }
 }
 
 @media(max-width: 750px){
@@ -170,11 +306,67 @@
   }
   .brands{
     &__inner{
+      flex-wrap: wrap;
       justify-content: center;
       img{
         padding: 20px;
       }
     }
+  }
+  .advantage{
+    padding: 40px 0;
+    &__inner{
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    &__card{
+      flex: 1 0 40%;
+    }
+  }
+  .team{
+    &__cards{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .blog-details{
+    &__box{
+      article{
+        flex-direction: column;
+      }
+      img{
+        margin-right: auto;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .contacts-top{
+    padding: 60px 0;
+    &__inner{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .contact-bottom{
+    &__map{
+      width: 100%;
+    }
+    .blog-details__input {
+      width: 100%;
+    }
+    .blog-details__input-name{
+      margin-bottom: 15px;
+    }
+  }
+  .details-other{
+    &__tabs{
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    &__tab{
+      margin-bottom: 20px;
+    }
+  }
+  .shop__inner{
+    display: block;
   }
 }
 
@@ -252,6 +444,36 @@
   .brands{
     padding: 265px 0 40px;
   }
+  .mission{
+    &__content-number{
+      font-size: 100px;
+      line-height: 100px;
+    }
+  }
+  .brands{
+    &.brands--empty{
+      padding: 40px 0;
+    }
+  }
+  .contact-bottom{
+    &__map{
+      height: 600px;;
+    }
+  }
+  .details-main{
+    &__sliders{
+      flex-direction: column;
+    }
+    &__big{
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    &__small{
+      margin-right: 0;
+      order: 1;
+      width: 100%;
+    }
+  }
 }
 @media(max-width: 500px){
   .products{
@@ -268,6 +490,80 @@
   .title{
     font-size: 26px;
   }
+  .breadcrumbs{
+    padding: 15px 0;
+    &__title{
+      font-size: 30px;
+    }
+  }
+  .mission{
+    &__content-footer{
+      padding-top: 70px;
+    }
+    &__content-item{
+      padding-left: 10px;
+      &:before{
+        top: -50px;
+        left: 23px;
+      }
+    }
+  }
+  .advantage{
+    &__card{
+      flex: 1 0 80%;
+    }
+  }
+  .blog-details{
+    &__box{
+      h3{
+        font-size: 30px;
+      }
+    }
+    &__comments-item{
+      display: block;
+    }
+    &__comments-img{
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    &__comments-item--re{
+      margin-left: 60px;
+    }
+    &__input{
+      width: 100%;
+    }
+    &__input-name{
+      margin-bottom: 20px;
+    }
+    &__author{
+      margin-bottom: 40px;
+      display: block;
+    }
+    &__author-img{
+      margin-bottom: 15px;
+    }
+    &__name{
+      margin-bottom: 5px;
+    }
+    &__person{
+      margin-bottom: 10px;
+    }
+  }
+  .pagination{
+    &__item{
+      padding: 10px;
+    }
+  }
+  .contact-bottom{
+    &__map{
+      height: 500px;;
+    }
+  }
+  .details-card{
+    &__title{
+      font-size: 30px;
+    }
+  }
 }
 @media(max-width: 400px){
   .top-slider{
@@ -280,6 +576,68 @@
   .info{
     &__card-img{
       margin-right: 15px;
+    }
+  }
+  .mission{
+    &__content-num{
+      font-size: 30px;
+      line-height: 32px;
+    }
+  }
+  .team{
+    &__card-content{
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  .blog-details{
+    &__box{
+      blockquote{
+        padding: 25px 35px;
+      }
+      img{
+        max-width: 290px;
+      }
+    }
+  }
+  .pagination{
+    &__item{
+      padding: 5px;
+    }
+  }
+  .contacts-top{
+    &__card{
+      padding: 30px;
+    }
+  }
+  .contact-bottom{
+    &__map{
+      height: 350px;;
+    }
+  }
+  .details-main{
+    &__big{
+      width: 300px;
+    }
+    &__big-item{
+      padding: 30px;
+    }
+  }
+  .shop-content{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .shop-main{
+    &--two{
+      .product__item-text{
+        max-width: 300px;
+      }
+      .product__item-img {
+        width: 290px;
+        height: 400px;
+      }
+      .product__item-content {
+        padding-left: 0px;
+      }
     }
   }
 }
