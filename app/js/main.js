@@ -4,6 +4,10 @@ $(function(){
     $('.menu__list').toggleClass('menu__list--active')
   });
 
+  $('.shop-filter__btn').on('click', function(){
+    $('.shop-filter').slideToggle();
+  });
+
   $('.details-slider').slick({
     prevArrow: '<button type="button" class="slick-prev"><img src="../images/icons/arrow-prev.svg" alt="arrow prev"></img> </button>',
     nextArrow: '<button type="button" class="slick-next"><img src="../images/icons/arrow-next.svg" alt="arrow next"></img></button>',
